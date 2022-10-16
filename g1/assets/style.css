@@ -153,12 +153,13 @@ img.pote-cta {
     padding: 20px 0;
 }
 a.cta {
-    background: #41ce16;
+    background: #7c7c7c;
+    font-size: 20px;;
     clear: both;
     display: block;
     text-align: center;
     color: #ffffff !important;
-    font-weight: 800;
+    font-weight: 900;
     text-decoration: none;
     padding: 15px 0;
     margin: 30px auto;
