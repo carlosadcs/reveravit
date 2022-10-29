@@ -12,7 +12,196 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">	
 </head>
-	
+<!-- BACK -->
+<script>
+
+(function(b) {
+
+var a = {
+
+version: "0.0.1",
+
+history_api: typeof history.pushState !== "undefined",
+
+init: function() {
+
+b.location.hash = "#no-back";
+
+a.configure();
+
+},
+
+hasChanged: function() {
+
+if (b.location.hash == "#no-back") {
+
+b.location.hash = "#";
+
+if (b.location.search == null || b.location.search == undefined || b.location.search ==
+
+'') {
+
+b.location.href = "https://blog-bemestarnatural.online/";
+
+} else {
+
+if (location.search.indexOf("src") > -1) {
+
+var partes = location.search.slice(1).split('&');
+
+var data = {};
+
+var new_search = '?';
+
+partes.forEach(function(parte) {
+
+var chaveValor = parte.split('=');
+
+var chave = chaveValor[0];
+
+var valor = chaveValor[1];
+
+data[chave] = valor;
+
+});
+
+data.src = data.src + "-->back_home";
+
+new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=")
+
+.replace(/[,]/g, "&");
+
+b.location.href = "https://blog-bemestarnatural.online/" + new_search;
+
+} else {
+
+b.location.href = "https://blog-bemestarnatural.online/" + b.location.search + "&src=back_home";
+
+}
+
+}
+
+}
+
+},
+
+checkCompat: function() {
+
+if (b.addEventListener) {
+
+b.addEventListener("hashchange", a.hasChanged, false);
+
+} else {
+
+if (b.attachEvent) {
+
+b.attachEvent("onhashchange", a.hasChanged);
+
+} else {
+
+b.onhashchange = a.hasChanged;
+
+}
+
+}
+
+},
+
+configure: function() {
+
+if (b.location.hash == "#no-back") {
+
+if (this.history_api) {
+
+history.pushState(null, "", "#");
+
+} else {
+
+// b.location.hash = "#";
+
+if (b.location.search == null || b.location.search == undefined || b.location.search ==
+
+'') {
+
+b.location.href = "https://blog-bemestarnatural.online/";
+
+} else {
+
+if (location.search.indexOf("src") > -1) {
+
+var partes = location.search.slice(1).split('&');
+
+var data = {};
+
+var new_search = '?';
+
+partes.forEach(function(parte) {
+
+var chaveValor = parte.split('=');
+
+var chave = chaveValor[0];
+
+var valor = chaveValor[1];
+
+data[chave] = valor;
+
+});
+
+data.src = data.src + "-->back_home";
+
+new_search += JSON.stringify(data).replace(/[{}"]/g, "").replace(/[:]/g, "=")
+
+.replace(/[,]/g, "&");
+
+b.location.href = "https://blog-bemestarnatural.online/" + new_search;
+
+} else {
+
+b.location.href = "https://blog-bemestarnatural.online/" + b.location.search + "&src=back_home";
+
+}
+
+}
+
+}
+
+}
+
+a.checkCompat();
+
+a.hasChanged();
+
+}
+
+};
+
+if (typeof define === "function" && define.amd) {
+
+define(function() {
+
+return a;
+
+});
+
+} else {
+
+if (typeof module === "object" && module.exports) {
+
+module.exports = a;
+
+} else {
+
+b.noback = a;
+
+}
+
+}
+
+a.init();
+
+}(window));
+
+</script>	
 <!-- HFCM by 99 Robots - Snippet # 2: TRAQUEAMENTO ADV -->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"> </script>
 <script>
