@@ -82,8 +82,8 @@ section.materia h1 {
 	margin: 20px 0 30px 0;
 }
 section.materia h3 {
-    font-size: 20px;
-    font-weight: 900;
+    color: #7c7c7c;
+    font-size: 18px;
 }
 section.materia h2 {
     font-size: 20px;
@@ -153,17 +153,16 @@ img.pote-cta {
     padding: 20px 0;
 }
 a.cta {
-    background: #7c7c7c;
-    font-size: 20px;;
+    background: #41ce16;
     clear: both;
     display: block;
     text-align: center;
     color: #ffffff !important;
-    font-weight: 900;
+    font-weight: 700;
     text-decoration: none;
     padding: 15px 0;
     margin: 30px auto;
-    width: 50%;
+    width: 23%;
 	border-radius: 10px 10px 10px 10px;
 	-moz-border-radius: 10px 10px 10px 10px;
 	-webkit-border-radius: 10px 10px 10px 10px;
